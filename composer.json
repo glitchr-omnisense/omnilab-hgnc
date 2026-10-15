@@ -1,0 +1,46 @@
+{
+    "name": "omnilab/hgnc",
+    "type": "library",
+    "description": "Omnilab HGNC: a human gene by its HGNC id (HGNC:4827), approved, previous or alias symbol, or an id HGNC records (NCBI Gene, Ensembl, UniProt, OMIM) - its approved name, locus group and type, location, previous symbols and names, aliases, gene groups, status, dates, MANE Select, RefSeq and CCDS ids - its NCBI Gene, Ensembl, UniProt and OMIM ids as cross-references, and a search, through HGNC's REST service, no key needed.",
+    "keywords": [
+        "science",
+        "biology",
+        "hgnc",
+        "genes",
+        "gene nomenclature",
+        "human genome",
+        "omim",
+        "omnilab"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marco Meyer",
+            "email": "marco.meyer@glitchr.io"
+        }
+    ],
+    "require": {
+        "php": ">=8.2",
+        "glitchr/omnilab": "^1.0@dev",
+        "symfony/http-client": "^6.4|^7.0|^8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Omnilab\\Hgnc\\": ""
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Omnilab\\Hgnc\\Tests\\": "Tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
