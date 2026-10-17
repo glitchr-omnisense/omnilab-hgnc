@@ -1,6 +1,6 @@
 # omnilab/hgnc
 
-HGNC for [glitchr/omnilab](https://github.com/glitchr-studio/omnilab): a human gene of the HUGO Gene
+HGNC for [omniscient/omnilab](https://github.com/glitchr-studio/omnilab): a human gene of the HUGO Gene
 Nomenclature Committee by its HGNC id (`HGNC:4827`), its approved symbol (`HBB`), a previous symbol
 or an alias that one gene alone bears (`FAM46C` is `TENT5C`), or an id HGNC records for it (NCBI
 Gene, Ensembl, UniProt, OMIM) - with its approved name, locus group and type, chromosomal location,
