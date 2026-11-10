@@ -40,6 +40,17 @@ Seal R. L. et al., "Genenames.org: the HGNC resources in 2023", Nucleic Acids Re
 [10.1093/nar/gkac888](https://doi.org/10.1093/nar/gkac888). HGNC asks for 10 calls a second at
 most: the source waits 0.1 s between two calls.
 
+## Usage policy
+
+Declared as data in [`policy.json`](policy.json) (read at https://www.genenames.org/help/rest/ on 2026-11-10), and honoured on every request by the
+core: a limit reached waits when its window ends within `max_wait` seconds, else the request is not
+sent ([Usage policies](https://github.com/glitchr-omnisense/omnilab/blob/1.x/docs/policies.md)).
+
+- Limits: 10 a second.
+- Licence: CC0-1.0; commercial use: allowed.
+- Credit: not required: Genenames.org: the HGNC and PGNC resources in 2026, Nucleic Acids Res. (HGNC, RRID:SCR_002827) (https://www.genenames.org/about/license/).
+- Needs: nothing.
+
 ## Responsibility
 
 This package is an independent, unofficial client: it is not affiliated with, endorsed by or
