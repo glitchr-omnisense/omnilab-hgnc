@@ -32,6 +32,34 @@ A gene is named in the core's `hgnc` scheme (`hgnc:4827`, displayed `HGNC:4827`)
 walks from HGNC into NCBI Gene, Ensembl, UniProt (`$collector->collect('hgnc', 'HBB')`), and into
 HGNC from any of them.
 
+## Install and a first call
+
+```sh
+composer require omnilab/hgnc
+```
+
+A real call, with no account and no key: the human HBB gene in HGNC. `mailto` is your address, sent
+in the User-Agent so that the service can reach you before it blocks a caller; the source keeps to
+the limits its [`policy.json`](policy.json) declares.
+
+```php
+<?php
+
+require __DIR__.'/vendor/autoload.php';
+
+use Omnilab\Hgnc\HgncSourceFactory;
+
+$hgnc = (new HgncSourceFactory())->create(['mailto' => 'you@example.org']);   // your address, in the User-Agent
+$gene = $hgnc->entity('HBB');
+echo $gene->id->display(), ' ', $gene->label, ': ', $gene->description, ', ', $gene->value('map_location'), "\n";
+```
+
+Its output on 2026-11-13:
+
+```
+HGNC:4827 HBB: hemoglobin subunit beta, 11p15.4
+```
+
 ## Terms of use
 
 HGNC releases all its data under [CC0](https://creativecommons.org/publicdomain/zero/1.0/)
